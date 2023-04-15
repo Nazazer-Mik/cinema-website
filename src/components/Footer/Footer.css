@@ -55,6 +55,22 @@
     line-height: 30px;
 }
 
+.flex-container p:hover
+{
+    text-decoration: underline 3px #02a8f3;
+    cursor: pointer;
+}
+
+.social-media-list p:hover
+{
+    text-decoration: none;
+}
+
+.social-media-list p:hover div
+{
+    text-decoration: underline 3px #02a8f3;
+}
+
 .social-media-list img
 {
     width: 30px;

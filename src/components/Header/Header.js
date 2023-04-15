@@ -1,12 +1,17 @@
 import React from 'react';
 import './Header.css'
+import { routes } from './routes.js'
 import HeaderSign from '../HeaderSign/HeaderSign.js'
 import MiddleHeader from '../MiddleHeader/MiddleHeader.js'
 import VerticalLine from '../VerticalLine/VerticalLine.js'
 import SignButton  from '../SignButton/SignButton.js'
+import { Routes, Route } from 'react-router-dom'
+
+const getRoutes = ({path, element}) => (
+    <Route path = {path} element = {element} key={path}/>
+);
 
 function Header () {
-
         return (
             <>
             <div className="header">
@@ -22,6 +27,9 @@ function Header () {
                 </div>
             </div>
             <div className='empty-space'></div>
+            <Routes>
+                {routes.map(getRoutes)}
+            </Routes>
             </>
         );
 }

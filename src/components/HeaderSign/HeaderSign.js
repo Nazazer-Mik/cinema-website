@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import "./HeaderSign.css"
 
 function HeaderSign (props){
 
     return (
         
-        <div className='sign-wrapper'>
-            <img src = {props.path} alt = {props.text + " icon"}/>
+        <Link to={props.path} className='sign-wrapper'>
+            <img src = {props.imgPath} alt = {props.text + " icon"}/>
             <div><div className='img-shadow'></div></div>
             <h2 className={'header-sign'}>
                 {props.text}
             </h2>
-        </div>
+        </Link>
     );
 }
 

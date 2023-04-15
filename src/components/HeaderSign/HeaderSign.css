@@ -7,30 +7,39 @@
     text-shadow: 0px 0px 7px #1f1f1f,
                  0px 0px 3px #282828,
                  0px 0px 15px black;
+    margin-bottom: 0;
 }
 
-.header-sign::after, .header-sign::before
+.sign-wrapper
 {
-    content: "";
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-wrapper > img
+{
+    max-width: 40px;
+}
+
+.sign-wrapper .img-shadow
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    display: inline;
     position: relative;
-    display: block;
-    top: 25px;
-    width: 100%;
-    height: 5px;
-    border-radius: 10px;
-    background-color: #F5CB5C;
+    top: -20px;
+    z-index: -1;
+    box-shadow: 0 0 40px 25px #FFC300;
+    background-color: #FFC300;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.header-sign::before
+.sign-wrapper:hover .img-shadow
 {
-    top: -25px;
-}
-
-.active
-{
-    background-color: #fff;
-    box-shadow: 0 0 30px 15px #FFC300,
-                0 0 20px 8px #FFE48B,
-                0 0 8px 4px#FFFCF0,
-                0 0 3px 1px #fff;
+    opacity: 1;
 }

@@ -1,18 +1,7 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom/client';
 import './Home.css'
 import MovieBlock from '../../components/MovieBlock/MovieBlock.js'
 import {movies} from './list.js'
-
-export function changeMovies(newCity)
-{
-    // let container = document.getElementById('main');
-    // //console.log(container.innerHTML);
-    // container.innerHTML ;
-
-    // let root2 = ReactDOM.createRoot(document.getElementById('main'));
-    // root2.render(<Home city = {newCity} />);
-}
 
 function getMovies (currentCity)
 {
@@ -29,15 +18,10 @@ function getMovies (currentCity)
 
 function Home (props) {
     console.log(props);
-    let city = (props.city === undefined) ? 'Crawley' : props.city;
 
-    // let [city, setCity] = useState('Crawley');
-
-    // let moviesRender = ({imgPath, technologies, title, description, date, location}) => {
-    //     if (location === city)
-    //     <MovieBlock imgPath={imgPath} technologies={technologies} title={title} description={description}/>
-    // };
-
+    let [city, setCity] = useState('Crawley');
+    if (city !== props.city)
+        setCity(props.city);
 
     return (
         <div className='main-block' id = 'main'>

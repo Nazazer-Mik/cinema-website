@@ -2,7 +2,7 @@ import React from 'react';
 import './MiddleHeader.css'
 import CitiesSelector from './CitiesSelector.js'
 
-function MiddleHeader () {
+function MiddleHeader (props) {
     return (
         <div className='middle-box'>
             <div className='inner-block'>
@@ -16,7 +16,7 @@ function MiddleHeader () {
                     </div>
                     <div className='sort-options'>
                         <font id = 'page-day' className='date-box'>Today </font> in 
-                        <CitiesSelector />
+                        <CitiesSelector PassCity={props.PassCity}/>
                     </div>
                 </div>
             </div>

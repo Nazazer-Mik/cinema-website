@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {changeMovies} from '../../pages/Home/Home.js'
 
 class CitiesSelector extends Component {
     constructor(props) {
@@ -9,12 +8,13 @@ class CitiesSelector extends Component {
         this.ChangeCity = this.ChangeCity.bind(this);
         this.GetCity = this.GetCity.bind(this);
 
+        this.PassCity = props.PassCity;
         //changeMovies(this.state.city);
     }
 
     ChangeCity (e) {
         this.setState({city: e.target.value})
-        changeMovies(e.target.value);
+        this.PassCity(e.target.value);
     }
 
     GetCity () {

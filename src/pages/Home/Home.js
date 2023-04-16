@@ -1,11 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom/client';
 import './Home.css'
 import MovieBlock from '../../components/MovieBlock/MovieBlock.js'
+import {movies} from './list.js'
 
-function Home () {
+export function changeMovies(newCity)
+{
+    // let container = document.getElementById('main');
+    // //console.log(container.innerHTML);
+    // container.innerHTML ;
+
+    // let root2 = ReactDOM.createRoot(document.getElementById('main'));
+    // root2.render(<Home city = {newCity} />);
+}
+
+function getMovies (currentCity)
+{
+    let moviesArray = [];
+
+    movies.forEach(e => 
+        {
+            if (e.location === currentCity)
+                moviesArray.push(<MovieBlock imgPath={e.imgPath} technologies={e.technologies} title={e.title} description={e.description}/>);
+        });
+
+    return moviesArray;
+}
+
+function Home (props) {
+    console.log(props);
+    let city = (props.city === undefined) ? 'Crawley' : props.city;
+
+    // let [city, setCity] = useState('Crawley');
+
+    // let moviesRender = ({imgPath, technologies, title, description, date, location}) => {
+    //     if (location === city)
+    //     <MovieBlock imgPath={imgPath} technologies={technologies} title={title} description={description}/>
+    // };
+
+
     return (
-        <div className='main-block'>
-            <MovieBlock imgPath={'./images/movies/puss-in-boots.jpg'} title={'Puss in Boots'} description={'When Puss in Boots discovers that his passion for adventure has taken its toll and he has burned through eight of his nine lives, he launches an epic journey to restore them by finding the mythical Last Wish.'}/>
+        <div className='main-block' id = 'main'>
+            {getMovies(city)}
         </div>
     );
 }

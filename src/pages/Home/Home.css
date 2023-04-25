@@ -7,3 +7,20 @@
     background-color: #2C2D3C;
     box-sizing: border-box;
 }
+
+.sad-sign
+{
+    text-align: center;
+    font-size: 1.6em;
+    color:#f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+legend
+{
+    color: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+}

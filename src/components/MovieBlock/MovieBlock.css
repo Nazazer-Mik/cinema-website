@@ -7,17 +7,20 @@
     border: 5px solid #242423;
     border-radius: 10px;
     margin: 1.5%;
-    box-shadow: 0px 0px 5px 2px #B0BBBF;
+    margin-left: 1%;
+    margin-right: 1%;
+    box-shadow: 0px 0px 5px 2px #333333;
     transition: all 0.3s ease;
     box-sizing: border-box;
     overflow: hidden;
     cursor: pointer;
+    display: inline-block;
 }
 
 .movie-block:hover
 {
     box-shadow: none;
-    box-shadow: 0px 0px 20px 10px #02a8f3;
+    transform: scale(105%, 105%);
 }
 
 .wrap
@@ -52,7 +55,7 @@
     margin: 0;
 }
 
-.description-block > p
+.description-block p
 {
     text-overflow: ellipsis;
     font-family: 'Open Sans', sans-serif;

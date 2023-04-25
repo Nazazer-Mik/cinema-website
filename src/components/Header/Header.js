@@ -8,10 +8,6 @@ import VerticalLine from '../VerticalLine/VerticalLine.js'
 import SignButton  from '../SignButton/SignButton.js'
 import { Routes, Route } from 'react-router-dom'
 
-const getRoutes = ({path, element}) => (
-    <Route path = {path} element = {element} key={path}/>
-);
-
 function Header () {
     let PassCityAncestor = (city) =>
     {
@@ -19,6 +15,13 @@ function Header () {
     }
 
     let [localCity, setLocalcity] = useState('Crawley');
+    
+    const getRoutes = ({path, element}) => 
+    path === "/" ? (
+        <Route path={path} element={<Home city={localCity} />} key={path} />
+      ) : (
+        <Route path={path} element={element} key={path} />
+      );
 
     return (
         <>
@@ -36,7 +39,6 @@ function Header () {
         </div>
         <div className='empty-space'></div>
         <Routes>
-            <Route path = '/' element = {<Home city={localCity}/>}/>
             {routes.map(getRoutes)}
         </Routes>
         </>

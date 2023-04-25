@@ -9,7 +9,6 @@ class CitiesSelector extends Component {
         this.GetCity = this.GetCity.bind(this);
 
         this.PassCity = props.PassCity;
-        //changeMovies(this.state.city);
     }
 
     ChangeCity (e) {

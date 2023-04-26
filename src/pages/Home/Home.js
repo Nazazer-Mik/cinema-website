@@ -28,7 +28,7 @@ function getMovies (currentCity)
             if (date?.toString() !== e.date.toString())
             {
                 date = e.date;
-                moviesArray.push(<div className='date-line'>{date.getDate()}.{date.getMonth()}.{date.getFullYear()}</div>);
+                moviesArray.push(<div className='date-container>'><div className='date-line'>{date.getDate()}.{date.getMonth()}.{date.getFullYear()}</div><div className="line"></div></div>);
             }
 
             moviesArray.push(<MovieBlock imgPath={e.imgPath} technologies={e.technologies} title={e.title} description={e.description}/>);

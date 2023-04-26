@@ -22,14 +22,16 @@ function getMovies (currentCity)
     let date = null;
     movies.sort(compareTimes).forEach(e => 
         {
-            if (date !== e.date)
+            if (e.location !== currentCity)
+                return;
+
+            if (date?.toString() !== e.date.toString())
             {
                 date = e.date;
-                moviesArray.push(<legend>{date.getDate()}.{date.getMonth()}.{date.getFullYear()}</legend>);
+                moviesArray.push(<div className='date-line'>{date.getDate()}.{date.getMonth()}.{date.getFullYear()}</div>);
             }
 
-            if (e.location === currentCity)
-                moviesArray.push(<MovieBlock imgPath={e.imgPath} technologies={e.technologies} title={e.title} description={e.description}/>);
+            moviesArray.push(<MovieBlock imgPath={e.imgPath} technologies={e.technologies} title={e.title} description={e.description}/>);
         });
 
     return moviesArray;

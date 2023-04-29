@@ -1,10 +1,11 @@
 import React from 'react';
 import './History.css'
 import {movies, currentDate} from '../../pages/Home/list.js'
+import { getDate } from '../Header/useful';
 
 function getHistoryLine(movie)
 {
-    let mvDate = movie.date.getDate() + '.' + movie.date.getMonth() + '.' + movie.date.getFullYear();
+    let mvDate = getDate(movie.date);
     return (
         <tr>
             <td>{movie.title}</td>

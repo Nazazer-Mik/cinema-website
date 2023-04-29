@@ -1,6 +1,7 @@
 import React from 'react';
 import './MoviePage.css'
 import { availability } from '../../pages/Home/list';
+import { getDate } from '../Header/useful';
 
 function MoviePage (props) {
     let movie = props.movie;
@@ -46,7 +47,7 @@ function MoviePage (props) {
                 <div className='time-info'>
                     <div style={{display: "inline-block"}}>
                         <h3>Release date:</h3>
-                        <img src='./images/calendar.png'/> <span> {movie.releaseDate.getDate() + '.' + movie.releaseDate.getMonth() + '.' + movie.releaseDate.getFullYear()}</span>
+                        <img src='./images/calendar.png'/> <span> {getDate(movie.releaseDate)}</span>
                     </div>
                     <div style={{display: "inline-block"}}>
                         <h3>Duration:</h3>

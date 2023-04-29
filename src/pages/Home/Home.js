@@ -3,6 +3,7 @@ import './Home.css'
 import MovieBlock from '../../components/MovieBlock/MovieBlock.js'
 import History from '../../components/History/History.js'
 import {movies, currentDate} from './list.js'
+import { getDate } from '../../components/Header/useful';
 
 function getMovies (currentCity)
 {
@@ -37,7 +38,7 @@ function getMovies (currentCity)
                 else if (date.toString() === tomorrow.toString())
                     dateStr = 'Tomorrow';
                 else
-                    dateStr = date.getDate() + '.' + date.getMonth() + '.' + date.getFullYear();
+                    dateStr = getDate(date);
 
                 moviesArray.push(
                 <div className='date-container'>

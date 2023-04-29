@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Home.css'
 import MovieBlock from '../../components/MovieBlock/MovieBlock.js'
-import {movies} from './list.js'
+import History from '../../components/History/History.js'
+import {movies, currentDate} from './list.js'
 
 function getMovies (currentCity)
 {
@@ -16,22 +17,37 @@ function getMovies (currentCity)
             return 0;
     };
 
-    if (movies.filter(movie => movie.location === currentCity).length === 0)
+    if (movies.filter(movie => movie.location === currentCity && movie.date >= currentDate).length === 0)
         return <h2 className='sad-sign'>Unfortunately, there are no movies in this area at the moment...<br/>Please try choosing another location.</h2>
 
     let date = null;
     movies.sort(compareTimes).forEach(e => 
         {
-            if (e.location !== currentCity)
+            if (e.location !== currentCity || e.date < currentDate)
                 return;
 
             if (date?.toString() !== e.date.toString())
             {
                 date = e.date;
-                moviesArray.push(<div className='date-container>'><div className='date-line'>{date.getDate()}.{date.getMonth()}.{date.getFullYear()}</div><div className="line"></div></div>);
+                let dateStr;
+                const tomorrow = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + 1);
+
+                if (date.toString() === currentDate.toString())
+                    dateStr = 'Today';
+                else if (date.toString() === tomorrow.toString())
+                    dateStr = 'Tomorrow';
+                else
+                    dateStr = date.getDate() + '.' + date.getMonth() + '.' + date.getFullYear();
+
+                moviesArray.push(
+                <div className='date-container'>
+                    <div className="line-itself first"></div>
+                    <div className='date-line'>{dateStr}</div>
+                    <div className="line-itself"></div>
+                </div>);
             }
 
-            moviesArray.push(<MovieBlock imgPath={e.imgPath} technologies={e.technologies} title={e.title} description={e.description}/>);
+            moviesArray.push(<MovieBlock data = {e}/>);
         });
 
     return moviesArray;
@@ -46,8 +62,34 @@ function Home (props) {
     return (
         <div className='main-block' id = 'main'>
             {getMovies(city)}
+            <div className='history-button' id = 'history-button-in' onClick={OpenModWindow}>
+                Show
+                <font className='history-word'>History</font> 
+                screenings . . .
+            </div>
+            <History />
         </div>
     );
 }
+
+document.addEventListener("scroll", event => {
+    let dateBox = document.getElementById("page-day");
+    let sections = document.getElementsByClassName("date-container");
+    let emptySpace = document.getElementById("empty-space");
+    let dateBoxStr = "Today";
+
+    for (let e of sections)
+    {
+        if (window.scrollY + emptySpace.scrollHeight*1.5 >= e.getBoundingClientRect().y + window.pageYOffset)
+            dateBoxStr = e.innerText;
+    }
+
+    dateBox.innerText = dateBoxStr;
+});
+
+let OpenModWindow = () => {
+    document.getElementById('history-canvas')?.classList.add('active');
+    document.body.style.overflow = "hidden";
+};
 
 export default Home;

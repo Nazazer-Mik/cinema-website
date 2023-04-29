@@ -5,7 +5,7 @@ import Support from '../../pages/Support/Support.js'
 import SignIn from '../../pages/Sign/SignIn.js'
 import SignUp from '../../pages/Sign/SignUp.js'
 
-export let routes = [
+export const routes = [
     {
          path: '/',
          element: <Home />
@@ -29,5 +29,5 @@ export let routes = [
     {
         path: '/signup',
         element: <SignUp/>
-    },
+    }
 ]

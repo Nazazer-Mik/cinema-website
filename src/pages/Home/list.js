@@ -1,13 +1,106 @@
 //tachnologies available: 2d, 3d, dolby-atmos, imax, vr
-
+export const currentDate = new Date(2023, 4, 20);
 export const movies = [
+    {
+        imgPath: '',
+        technologies: [],
+        title: 'Murdery Mystery 2',
+        description: ``,
+        date: new Date(2023, 3, 19),
+        location: 'Crawley'
+    },
+    {
+        imgPath: '',
+        technologies: [],
+        title: 'Nobody',
+        description: ``,
+        date: new Date(2023, 4, 19),
+        location: 'Brighton'
+    },
+    {
+        imgPath: '',
+        technologies: [],
+        title: 'Home',
+        description: ``,
+        date: new Date(2023, 1, 18),
+        location: 'Crawley'
+    },
+    {
+        imgPath: '',
+        technologies: [],
+        title: 'Yes Day',
+        description: ``,
+        date: new Date(2023, 3, 2),
+        location: 'Horley'
+    },
+    {
+        imgPath: '',
+        technologies: [],
+        title: 'The Spy Next Door',
+        description: ``,
+        date: new Date(2023, 1, 28),
+        location: 'Tunbridge Wells'
+    },
+    {
+        imgPath: '',
+        technologies: [],
+        title: 'Time Trap',
+        description: ``,
+        date: new Date(2023, 4, 16),
+        location: 'Crawley'
+    },
+    {
+        imgPath: '',
+        technologies: [],
+        title: 'Slender Man',
+        description: ``,
+        date: new Date(2023, 2, 15),
+        location: 'Brighton'
+    },
+    {
+        imgPath: '',
+        technologies: [],
+        title: 'The Deep House',
+        description: ``,
+        date: new Date(2023, 4, 10),
+        location: 'Horley'
+    },
     {
         imgPath: './images/movies/puss-in-boots.jpg',
         technologies: ['2d', '3d'],
-        title: 'Puss in Boots',
+        title: 'Puss in Boots: The Last Wish',
         description: `When Puss in Boots discovers that his passion for adventure
         has taken its toll and he has burned through eight of his nine lives,
         he launches an epic journey to restore them by finding the mythical Last Wish.`,
+        date: new Date(2023, 4, 20),
+        location: 'Crawley',
+        trailerLink: 'https://www.youtube.com/embed/OseB6af6PiE',
+        trailerTitle: 'Puss in Boots: The Last Wish | Official Trailer (Universal Pictures) HD',
+        detailedDescription: `This year, everyone’s favourite leche-loving, swashbuckling, fear-defying feline returns.
+        For the first time in more than a decade, DreamWorks Animation presents a new adventure in the Shrek universe as 
+        daring outlaw Puss in Boots discovers that his passion for peril and disregard for safety have taken their toll.
+        Puss has burned through eight of his nine lives, though he lost count along the way. Getting those lives back will
+        send Puss in Boots on his grandest quest yet. Academy Award® nominee Antonio Banderas returns as the voice of the
+        notorious PiB as he embarks on an epic journey into the Black Forest to find the mythical Wishing Star and restore
+        his lost lives. But with only one life left, Puss will have to humble himself and ask for help from his former 
+        partner and nemesis: the captivating Kitty Soft Paws (Oscar® nominee Salma Hayek). In their quest, Puss and Kitty
+        will be aided—against their better judgment—by a ratty, chatty, relentlessly cheerful mutt, Perro (Harvey Guillén,
+        What We Do in the Shadows). Together, our trio of heroes will have to stay one step ahead of Goldilocks (Oscar® 
+        nominee Florence Pugh, Black Widow) and the Three Bears Crime Family, “Big” Jack Horner (Emmy winner John Mulaney,
+        Big Mouth) and terrifying bounty hunter, The Big Bad Wolf (Wagner Moura, Narcos).`,
+        releaseDate: new Date(2023, 2, 3),
+        runningTime: 102,
+        director: 'Joel Crawford, Januel Mercado',
+        cast: `Antonio Banderas, Olivia Colman, Salma Hayek, Wagner Moura, Ray Winstone, Florence Pugh, Harvey Guillén,
+         Da'Vine Joy Randolph, Samson Kayo, John Mulaney, Anthony Mendez`,
+        descImg: './images/movies/puss-in-boots2.jpg'
+    },
+    {
+        imgPath: './images/movies/juniper.jpg',
+        technologies: ['2d', 'dolby-atmos'],
+        title: 'Juniper',
+        description: `Juniper's story offers few surprises -- and it doesn't need any,
+         with Charlotte Rampling holding the viewer rapt from start to finish.`,
         date: new Date(2023, 4, 20),
         location: 'Crawley'
     },
@@ -97,3 +190,10 @@ export const movies = [
     }
 ]
 
+export const availability = [
+    {
+        title: 'Puss in Boots: The Last Wish',
+        availableOn: [[new Date(2023, 4, 20, 12), new Date(2023, 4, 20, 16), new Date(2023, 4, 20, 18, 15)],
+                      [new Date(2023, 4, 23, 10), new Date(2023, 4, 23, 15, 30), new Date(2023, 4, 20, 19)]]
+    }
+];

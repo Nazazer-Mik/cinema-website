@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.movie-page-container
+{
+    margin: 0;
+    padding: 25px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 10vh;
+    background-color: #191919;
+    overflow: hidden;
+}
+
+.movie-page-container h1
+{
+    font-family: 'Noto Sans', sans-serif;
+    color: #f5f5f5;
+    font-size: 2.3em;
+}
+
+.movie-page-container iframe
+{
+    width: 60vw;
+    height: 33vw;
+    display: block;
+}
+
+.trailer-flex-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ticket-box
+{
+    display: block;
+}
+
+.ticket-button
+{
+    
+    background-color: #FFC300;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .5s ease;
+    border: 5px solid #b0bbbf;
+    display: block;
+    width:fit-content;
+    margin: 10vh auto;
+}
+
+.ticket-button:hover
+{
+    border: 5px solid #02a8f3;
+}
+
+h3
+{
+    font-family: 'Montserrat', sans-serif;
+    color: #b0bbbf;
+    text-align: center;
+}
+
+.ticket-box table
+{
+    font-family: 'Open Sans', sans-serif;
+    color: #b0bbbf;
+    text-align: center;
+}
+
+.description-block-movie
+{
+    margin: 0;
+    background-color: #242423;
+    padding: 5vw;
+    padding-left: 10vw;
+    padding-bottom: 10vw;
+    display:block;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.description-block-movie h2
+{
+    color:#f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+}
+
+.time-info
+{
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    color:#b0bbbf;
+    font-size: large;
+}
+
+.time-info span 
+{
+    vertical-align: middle;
+}
+
+.time-info div
+{
+    padding-right: 17vw;
+}
+
+.time-info h3
+{
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+.time-info img
+{
+    max-width: 45px;
+    margin-right: 12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.description
+{
+    max-width: 65%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.description-text
+{
+    color: #C4CCCF;
+    font-family: 'Poppins', sans-serif;
+    text-indent: 3em;
+    font-size: 1.05em;
+    letter-spacing: 0.9px;
+    line-height: 1.8em;
+    padding-top: 5vh;
+}
+
+.description-block-movie > img
+{
+    width: 15%;
+    padding: 5%;
+    padding-bottom: 0;
+    position: relative;
+    bottom: 0;
+}
+
+.other-info
+{
+    font-family: 'Montserrat', sans-serif;
+    color: #C4CCCF;
+    line-height: 1.8em;
+    max-width: 65%;
+    font-size: 1.1em;
+    word-spacing: 0.1em;
+}

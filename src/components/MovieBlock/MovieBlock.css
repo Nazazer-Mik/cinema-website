@@ -33,7 +33,7 @@
     box-sizing: border-box;
 }
 
-.description-block
+.wrap .description-block
 {
     position: absolute;
     bottom: 0;
@@ -45,7 +45,7 @@
     padding-bottom: 0;
 }
 
-.description-block > h3
+.wrap .description-block > h3
 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
@@ -54,7 +54,7 @@
     margin: 0;
 }
 
-.description-block p
+.wrap .description-block p
 {
     text-overflow: ellipsis;
     font-family: 'Open Sans', sans-serif;

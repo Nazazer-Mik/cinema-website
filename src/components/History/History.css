@@ -1,0 +1,119 @@
+.active
+{
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+.history-bg
+{
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    display: none;
+    opacity: 0;
+}
+
+.history-window
+{
+    z-index: 55;
+    width: 60vw;
+    height: 100%;
+    background-color: #2C2D3C;
+    border-left: 5px solid #b0bbbf;
+    border-right: 5px solid #b0bbbf;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 0;
+}
+
+.history-top-panel
+{
+    width: 100%;
+    height: 10vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: #2C2D3C;
+}
+
+.history-back-button
+{
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    background-color: #b0bbbf;
+    border-radius: 30px;
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border: 5px solid #242423;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+.history-back-button:hover
+{
+    background-color: #242423;
+    color: #b0bbbf;
+    border: 5px solid #b0bbbf;
+}
+
+.history-back-button:hover img
+{
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.history-back-button img
+{
+    padding-right: 15px;
+    max-width: 3vh;
+    opacity: 1;
+    transition: transform .3s ease, opacity .1s ease;
+}
+
+.history-top-panel h2
+{
+    font-family: 'Montserrat', sans-serif;
+    color: #b0bbbf;
+    text-align: center;
+    font-size: 1.8em;
+    display: block;
+    margin: 0 auto !important;
+}
+
+.history-window table
+{
+    font-family: 'Open Sans', sans-serif;
+    color: #b0bbbf;
+    width: 100%;
+    text-align: left;
+    padding: 40px;
+    box-sizing: border-box;
+    font-size: 1.1em;
+}
+
+.history-window table th
+{
+    color: #f5f5f5;
+}
+
+.history-window table th, table td 
+{
+    padding: 15px;
+}
+
+.history-window table tr:nth-child(2n)
+{
+    background-color: #b0bbbf;
+    color: #242423;
+}

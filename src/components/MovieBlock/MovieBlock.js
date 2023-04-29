@@ -1,5 +1,6 @@
 import React from 'react';
 import './MovieBlock.css'
+import { Link } from 'react-router-dom';
 
 function GetImages(images)
 {
@@ -15,21 +16,23 @@ function GetImages(images)
 function MovieBlock (props) {
 
     let movieBlock = {
-        backgroundImage: 'url(' + props.imgPath +')',
+        backgroundImage: 'url(' + props.data.imgPath +')',
         height: window.innerHeight/2.5,
         width: (window.innerWidth*0.88)/3
     };
 
     return (
-        <div className='movie-block' style={movieBlock}>
-            <div className='wrap'>
-                {GetImages(props.technologies)}
-                <div className='description-block'>
-                    <h3>{props.title}</h3>
-                    <p>{props.description}</p>
+        <Link to={'/' + props.data.title.toLowerCase().replaceAll(' ', '-')}>
+            <div className='movie-block' style={movieBlock}>
+                <div className='wrap'>
+                    {GetImages(props.data.technologies)}
+                    <div className='description-block'>
+                        <h3>{props.data.title}</h3>
+                        <p>{props.data.description}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }
 

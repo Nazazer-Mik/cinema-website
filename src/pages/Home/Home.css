@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .main-block
 {
     display: block;
@@ -6,6 +8,7 @@
     margin: 0;
     background-color: #2C2D3C;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .sad-sign
@@ -22,6 +25,7 @@
 {
     display: flex;
     width: 100%;
+    box-sizing: border-box;
     flex-direction: row;
     align-items: center;
 }
@@ -33,15 +37,57 @@
     font-size: 1.4em;
     padding-left: 20px;
     padding-right: 20px;
-    display: inline-block;
+    display: block;
     z-index: 10;
+    text-decoration: underline #ffc300;
 }
 
-.line
+.line-itself
 {
+    margin: 0;
     width: 100%;
     border-radius: 10px;
     height: 5px;
     background-color: #f5f5f5;
-    display: inline-block;
+    display: block;
+}
+
+.first
+{
+    max-width: 8vw;
+}
+
+.history-button
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    background-color: #b0bbbf;
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+    border: 5px solid #333333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 100%;
+    display: block;
+    left: 85%;
+    color: #333333;
+    font-weight: 600;
+}
+
+.history-button:hover
+{
+    color: #b0bbbf;
+    border: 5px solid #b0bbbf;
+    background-color: #242423;
+    left: 83%;
+}
+
+.history-word
+{
+    font-family: 'Pacifico', cursive;
+    padding-left: 10px;
+    padding-right: 10px;
 }

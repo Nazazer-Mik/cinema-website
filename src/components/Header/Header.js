@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import './Header.css'
 import Home from '../../pages/Home/Home.js'
 import { routes } from './routes.js'
+import {movies} from '../../pages/Home/list.js'
 import HeaderSign from '../HeaderSign/HeaderSign.js'
 import MiddleHeader from '../MiddleHeader/MiddleHeader.js'
 import VerticalLine from '../VerticalLine/VerticalLine.js'
 import SignButton  from '../SignButton/SignButton.js'
+import MoviePage from '../MoviePage/MoviePage.js'
 import { Routes, Route } from 'react-router-dom'
 
 function Header () {
@@ -23,6 +25,13 @@ function Header () {
         <Route path={path} element={element} key={path} />
       );
 
+    const addMovieRoutes = (r) =>
+    {
+        let routeList = r;
+        movies.forEach(m => routeList.push({path: '/' + m.title.toLowerCase().replaceAll(' ', '-'), element: <MoviePage movie = {m}/>}))
+        return routeList;
+    }
+
     return (
         <>
         <div className="header">
@@ -37,9 +46,9 @@ function Header () {
                 <SignButton text={'Sign up'} path = {'/signup'}/>
             </div>
         </div>
-        <div className='empty-space'></div>
+        <div className='empty-space' id = 'empty-space'></div>
         <Routes>
-            {routes.map(getRoutes)}
+            {addMovieRoutes(routes).map(getRoutes)}
         </Routes>
         </>
     );

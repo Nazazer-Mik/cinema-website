@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MoviePage.css'
 import { availability, reviews} from '../../pages/Home/list';
 import { getDate, getTime } from '../Header/useful';
 
 function MoviePage (props) {
     let movie = props.movie;
+    let [reviewsState, setReviewsState] = useState(reviews);
     
     let pasteTimes = (arr) => {
         const options = {
@@ -40,11 +41,24 @@ function MoviePage (props) {
     }
 
     let checkComments = (r) => {
-        let revs = reviews.filter(r => r.title === movie.title);
+        let revs = reviewsState.filter(r => r.title === movie.title);
             if (revs.length === 0)
                 return <h3>Seems like noone left a comment yet...</h3>
             else
-                return revs[0]?.comments.map(c => loadComments(c));
+                    return revs[0]?.comments.map(c => loadComments(c));
+    }
+
+    let postComment = () => {
+        let newComment = 
+        {
+            username: props.user,
+            date: new Date(Date.now()),
+            message: document.getElementById('comment-body')?.value
+        }
+        let revs = reviewsState.filter(r => r.title === movie.title);
+        
+        revs[0].comments.push(newComment);
+        setReviewsState(revs);
     }
 
     let commentField = () => {        
@@ -53,8 +67,8 @@ function MoviePage (props) {
             return (
                 <>
                     <h3 style={{display: "block"}}>Leave a comment</h3>
-                    <textarea placeholder='Review...' className='comment-body'/>
-                    <div className='sign-button'>Send</div>
+                    <textarea placeholder='Review...' className='comment-body' id ='comment-body'/>
+                    <div className='sign-button' onClick={postComment}>Send</div>
                 </>
             )
         }

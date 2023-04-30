@@ -102,7 +102,21 @@ export const movies = [
         description: `Juniper's story offers few surprises -- and it doesn't need any,
          with Charlotte Rampling holding the viewer rapt from start to finish.`,
         date: new Date(2023, 4, 20),
-        location: 'Crawley'
+        location: 'Crawley',
+        trailerLink: 'https://www.youtube.com/embed/XwR4CIeMCzs',
+        trailerTitle: 'Juniper - Official Trailer',
+        detailedDescription: `Sam (17) has been on a self-destructive spiral that could lead to his death.
+         He returns home from boarding school to find his wheelchair-bound English grandmother, Ruth 
+         has moved in. Ruth is an ex-war photographer with a lust for life and a love of the bottle.
+          Sam soon finds himself profoundly confronted by her alcoholic wit and chutzpah. Their first 
+          meeting is awkward; their second violent. Things get worse when Sam finds himself stranded
+           alone with her and her nurse Sarah for the school holidays. Both strong-willed characters,
+            a battle of supremacy ensues, enabling Sam to embrace life again and for Ruth to face her mortality. `,
+        releaseDate: new Date(2023, 1, 23),
+        runningTime: 94,
+        director: 'Matthew Saville',
+        cast: `Marton Csokas, Charlotte Rampling, George Ferrier, Edith Poor `,
+        descImg: './images/movies/juniper2.jpg'
     },
     {
         imgPath: './images/movies/the-tank.jpg',
@@ -112,7 +126,21 @@ export const movies = [
          and his family accidentally unleash an ancient, long-dormant creature that
           terrorized the entire region—including his own ancestors—for generations.`,
         date: new Date(2023, 4, 20),
-        location: 'Crawley'
+        location: 'Crawley',
+        trailerLink: 'https://www.youtube.com/embed/RwpVvk6L-Lg',
+        trailerTitle: 'The Tank - Official Trailer (2023)',
+        detailedDescription: `Sam (17) has been on a self-destructive spiral that could lead to his death.
+         He returns home from boarding school to find his wheelchair-bound English grandmother, Ruth 
+         has moved in. Ruth is an ex-war photographer with a lust for life and a love of the bottle.
+          Sam soon finds himself profoundly confronted by her alcoholic wit and chutzpah. Their first 
+          meeting is awkward; their second violent. Things get worse when Sam finds himself stranded
+           alone with her and her nurse Sarah for the school holidays. Both strong-willed characters,
+            a battle of supremacy ensues, enabling Sam to embrace life again and for Ruth to face her mortality. `,
+        releaseDate: new Date(2023, 2, 14),
+        runningTime: 106,
+        director: 'Scott Walker',
+        cast: `Luciane Buchanan, Matthew Whelan, Zara Nausbaum, Regina Hegemann`,
+        descImg: './images/movies/the-tank2.jpg'
     },
     {
         imgPath: './images/movies/the-best-man.jpg',
@@ -122,7 +150,19 @@ export const movies = [
          a remote resort hotel, former Special Ops soldiers attending their best friend's
           wedding must rely only on their wits and training to combat the terrorists and save the hostages held for ransom.`,
         date: new Date(2023, 4, 20),
-        location: 'Crawley'
+        location: 'Crawley',
+        trailerLink: 'https://www.youtube.com/embed/PBKckidprks',
+        trailerTitle: 'The Best Man: The Final Chapters | Official Trailer | Peacock Original',
+        detailedDescription: `The Best Man: The Final Chapters is an American comedy-drama miniseries created by Malcolm D. Lee
+         and developed by Lee and Dayna Lynne North. The series takes place a few years after The Best Man Holiday and it premiered on Peacock on December 22, 2022. 
+         As relationships evolve and past grievances resurface in the unpredictable stages of midlife crisis meets midlife renaissance.On February 9, 2021,
+          Peacock gave production a limited series order consisting of ten episodes. It is created by Malcolm D. Lee and Dayna Lynne North who are also
+           executive producing it.[1] Filming for the limited series began on March 14, 2022.[4] It was filmed in New York City, New Jersey, and Dominican Republic.`,
+        releaseDate: new Date(2022, 6, 10),
+        runningTime: 30,
+        director: 'Malcolm D. Lee, Dayna Lynne North',
+        cast: `    Morris Chestnut, Melissa De Sousa, Regina Hall`,
+        descImg: './images/movies/the-best-man2.jpg'
     },
     {
         imgPath: './images/movies/evil-dead-rise.jpg',
@@ -195,5 +235,19 @@ export const availability = [
         title: 'Puss in Boots: The Last Wish',
         availableOn: [[new Date(2023, 4, 20, 12), new Date(2023, 4, 20, 16), new Date(2023, 4, 20, 18, 15)],
                       [new Date(2023, 4, 23, 10), new Date(2023, 4, 23, 15, 30), new Date(2023, 4, 20, 19)]]
+    },
+    {
+        title: 'Juniper',
+        availableOn: [[new Date(2023, 4, 20, 11), new Date(2023, 4, 20, 14), new Date(2023, 4, 20, 20)]]
+    },
+    {
+        title: 'The Tank',
+        availableOn: [[new Date(2023, 4, 20, 9), new Date(2023, 4, 20, 16), new Date(2023, 4, 20, 17)],
+                      [new Date(2023, 4, 24, 11), new Date(2023, 4, 24, 14)]]
+    },
+    {
+        title: 'The Best Man',
+        availableOn: [[new Date(2023, 4, 20, 10), new Date(2023, 4, 20, 11, 30), new Date(2023, 4, 20, 15)],
+        [new Date(2023, 4, 22, 11), new Date(2023, 4, 23, 14)]]
     }
 ];

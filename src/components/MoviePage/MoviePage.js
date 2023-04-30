@@ -5,13 +5,12 @@ import { getDate, getTime } from '../Header/useful';
 
 function MoviePage (props) {
     let movie = props.movie;
-
+    
     let pasteTimes = (arr) => {
         const options = {
             month: 'long'
         }
 
-        console.log(arr);
         return (
             <tr>
                 <td>{arr[0].getDate()} of {arr[0].toLocaleDateString("en-US", options)}</td>
@@ -48,6 +47,21 @@ function MoviePage (props) {
                 return revs[0]?.comments.map(c => loadComments(c));
     }
 
+    let commentField = () => {        
+        if (props.user != null)
+        {
+            return (
+                <>
+                    <h3 style={{display: "block"}}>Leave a comment</h3>
+                    <textarea placeholder='Review...' className='comment-body'/>
+                    <div className='sign-button'>Send</div>
+                </>
+            )
+        }
+        else
+            return <h3 style={{display: "block"}}>Please, log in to leave reviews.</h3>
+    }
+
     let findObj = (e) => e.title === movie.title;
 
     window.scrollTo(0, 0);
@@ -75,11 +89,11 @@ function MoviePage (props) {
                 <div className='time-info'>
                     <div style={{display: "inline-block"}}>
                         <h3>Release date:</h3>
-                        <img src='./images/calendar.png'/> <span> {getDate(movie.releaseDate)}</span>
+                        <img src='./images/calendar.png' alt="calendar-icon"/> <span> {getDate(movie.releaseDate)}</span>
                     </div>
                     <div style={{display: "inline-block"}}>
                         <h3>Duration:</h3>
-                        <img src='./images/clock.png'/> <span> {movie.runningTime} minutes</span>
+                        <img src='./images/clock.png' alt="clock-icon"/> <span> {movie.runningTime} minutes</span>
                     </div>
                 </div>
                 <p className='description-text'>{movie.detailedDescription}</p>
@@ -95,6 +109,7 @@ function MoviePage (props) {
         <div className='reviews-section'>
             <h2>Share your emotions with others</h2>
             {checkComments(reviews)}
+            {commentField()}
         </div>
         </>
     );

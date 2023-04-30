@@ -18,14 +18,14 @@ function Header () {
     }
 
     let [localCity, setLocalcity] = useState('Crawley');
-    let [storage, setItem] = useState(window.sessionStorage);
+    let [storage, setStorage] = useState(window.sessionStorage.getItem("authorized"));
     
     const getRoutes = ({path, element}) => 
     {
         if(path === "/")
-            return <Route path={path} element={<Home city={localCity} />} key={path} />
+            return <Route path={path} element={<Home city={localCity}/>} key={path} />
         else if (path === "/signin")
-            return <Route path={path} element={<SignIn storage = {storage}/>} key={path} />
+            return <Route path={path} element={<SignIn putToStorage = {setStorage}/>} key={path} />
         else
             return <Route path={path} element={element} key={path} />
     }
@@ -34,18 +34,20 @@ function Header () {
     const addMovieRoutes = (r) =>
     {
         let routeList = r;
-        movies.forEach(m => routeList.push({path: '/' + m.title.toLowerCase().replaceAll(' ', '-'), element: <MoviePage movie = {m}/>}))
+        movies.forEach(m => routeList.push({path: '/' + m.title.toLowerCase().replaceAll(' ', '-'), element: <MoviePage movie = {m} user={storage}/>})) //???
         return routeList;
     }
 
     let exitAccount = () => {
-        storage.clear();
-        alert('gnom');
+        setStorage(null);
+        window.sessionStorage.clear();
+        document.location.reload();
     }
 
     let account = () => {
-        let user = storage.getItem("authorized");
-        if (user == null)
+        let user = window.sessionStorage.getItem("authorized");
+
+        if (user === null)
             return (
             <>
                 <SignButton text={'Sign in'} path = {'/signin'}/>
@@ -56,9 +58,9 @@ function Header () {
             let bonuses = JSON.parse(window.localStorage.getItem(user)).bonuses;
             return (
                 <>
-                    <img src = './images/user.png' className='user-icon'/>
+                    <img src = './images/user.png' className='user-icon' alt="user-icon"/>
                     <h3>{user}</h3>
-                    <img src = './images/star.png' className='star'/>
+                    <img src = './images/star.png' className='star' alt="star-icon"/>
                     <h3>{bonuses}</h3>
                     <div className='sign-button' onClick={exitAccount}>Sign out</div>
                 </>);

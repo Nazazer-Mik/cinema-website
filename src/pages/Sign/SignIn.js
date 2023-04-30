@@ -19,7 +19,8 @@ function SignIn (props) {
             event.preventDefault();
         }
 
-        window.sessionStorage.setItem("authorized", singData.username);
+        props.putToStorage(singData.username);
+        window.sessionStorage.setItem("authorized", singData.username)
     }
 
     return (

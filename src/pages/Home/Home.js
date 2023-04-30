@@ -47,7 +47,7 @@ function getMovies (currentCity)
                     <div className="line-itself"></div>
                 </div>);
             }
-
+            
             moviesArray.push(<MovieBlock data = {e}/>);
         });
 

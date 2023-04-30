@@ -12,7 +12,7 @@
     overflow: hidden;
 }
 
-.movie-page-container h1
+h1
 {
     font-family: 'Noto Sans', sans-serif;
     color: #f5f5f5;
@@ -61,7 +61,7 @@
     border: 5px solid #02a8f3;
 }
 
-h3
+.movie-page-container h3, .description-block-movie h3
 {
     font-family: 'Montserrat', sans-serif;
     color: #b0bbbf;

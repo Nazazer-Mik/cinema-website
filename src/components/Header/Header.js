@@ -9,6 +9,7 @@ import VerticalLine from '../VerticalLine/VerticalLine.js'
 import SignButton  from '../SignButton/SignButton.js'
 import MoviePage from '../MoviePage/MoviePage.js'
 import { Routes, Route } from 'react-router-dom'
+import SignIn from '../../pages/Sign/SignIn';
 
 function Header () {
     let PassCityAncestor = (city) =>
@@ -17,19 +18,52 @@ function Header () {
     }
 
     let [localCity, setLocalcity] = useState('Crawley');
+    let [storage, setItem] = useState(window.sessionStorage);
     
     const getRoutes = ({path, element}) => 
-    path === "/" ? (
-        <Route path={path} element={<Home city={localCity} />} key={path} />
-      ) : (
-        <Route path={path} element={element} key={path} />
-      );
+    {
+        if(path === "/")
+            return <Route path={path} element={<Home city={localCity} />} key={path} />
+        else if (path === "/signin")
+            return <Route path={path} element={<SignIn storage = {storage}/>} key={path} />
+        else
+            return <Route path={path} element={element} key={path} />
+    }
+    
 
     const addMovieRoutes = (r) =>
     {
         let routeList = r;
         movies.forEach(m => routeList.push({path: '/' + m.title.toLowerCase().replaceAll(' ', '-'), element: <MoviePage movie = {m}/>}))
         return routeList;
+    }
+
+    let exitAccount = () => {
+        storage.clear();
+        alert('gnom');
+    }
+
+    let account = () => {
+        let user = storage.getItem("authorized");
+        if (user == null)
+            return (
+            <>
+                <SignButton text={'Sign in'} path = {'/signin'}/>
+                <SignButton text={'Sign up'} path = {'/signup'}/>
+            </>);
+        else
+        {
+            let bonuses = JSON.parse(window.localStorage.getItem(user)).bonuses;
+            return (
+                <>
+                    <img src = './images/user.png' className='user-icon'/>
+                    <h3>{user}</h3>
+                    <img src = './images/star.png' className='star'/>
+                    <h3>{bonuses}</h3>
+                    <div className='sign-button' onClick={exitAccount}>Sign out</div>
+                </>);
+        }
+
     }
 
     return (
@@ -41,9 +75,8 @@ function Header () {
             <HeaderSign text={"Upcoming"} imgPath = {"./images/icon-clapperboard.png"} path = {'/upcoming'}/>
             <HeaderSign text={"Support"} imgPath = {"./images/icon-phone.png"} path = {'/support'}/>
             <VerticalLine/>
-            <div>
-                <SignButton text={'Sign in'} path = {'/signin'}/>
-                <SignButton text={'Sign up'} path = {'/signup'}/>
+            <div className='profile-view'>
+                {account()}
             </div>
         </div>
         <div className='empty-space' id = 'empty-space'></div>

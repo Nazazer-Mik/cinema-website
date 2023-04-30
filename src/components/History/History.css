@@ -117,3 +117,9 @@
     background-color: #b0bbbf;
     color: #242423;
 }
+
+.history-window table tr:hover
+{
+    text-decoration: underline #02a8f3;
+    cursor: pointer;
+}

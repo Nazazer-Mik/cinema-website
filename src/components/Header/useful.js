@@ -8,3 +8,13 @@ export let getDate = (e) => {
 
     return day + '.' + month + '.' + year;
 };
+
+export let getTime = (e) => {
+    let hours = e.getHours();
+    let minutes = e.getMinutes();
+
+    hours = (hours < 10) ? '0' + hours : hours;
+    minutes = (minutes < 10) ? '0' + minutes : minutes;
+
+    return hours + ':' + minutes;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import './MoviePage.css'
-import { availability } from '../../pages/Home/list';
-import { getDate } from '../Header/useful';
+import { availability, reviews} from '../../pages/Home/list';
+import { getDate, getTime } from '../Header/useful';
 
 function MoviePage (props) {
     let movie = props.movie;
@@ -18,6 +18,34 @@ function MoviePage (props) {
                 {arr.map(e => <td>{e.getHours()}:{(e.getMinutes() === 0) ? '00' : e.getMinutes()}</td>)}
             </tr>
         );
+    }
+
+    let loadComments = (c) => {
+
+        return (
+            <div className='review-container'>
+                <img src='./images/user.png' alt='user-avatar'/>
+                <h3>
+                    <div className='dot'></div>
+                    {c.username} 
+                    <div className='dot'></div> 
+                    <font style={{color: "#C4CCCF"}}>
+                        {getDate(c.date)}
+                        <div className='dot'></div>
+                        {getTime(c.date)}
+                    </font>
+                </h3>
+                <p>{c.message}</p>
+            </div>
+        );
+    }
+
+    let checkComments = (r) => {
+        let revs = reviews.filter(r => r.title === movie.title);
+            if (revs.length === 0)
+                return <h3>Seems like noone left a comment yet...</h3>
+            else
+                return revs[0]?.comments.map(c => loadComments(c));
     }
 
     let findObj = (e) => e.title === movie.title;
@@ -63,6 +91,10 @@ function MoviePage (props) {
                 <hr/>
                 <font style={{color: "#f5f5f5"}}>Cast: </font>{movie.cast}
             </div>
+        </div>
+        <div className='reviews-section'>
+            <h2>Share your emotions with others</h2>
+            {checkComments(reviews)}
         </div>
         </>
     );

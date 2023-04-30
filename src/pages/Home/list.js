@@ -161,7 +161,7 @@ export const movies = [
         releaseDate: new Date(2022, 6, 10),
         runningTime: 30,
         director: 'Malcolm D. Lee, Dayna Lynne North',
-        cast: `    Morris Chestnut, Melissa De Sousa, Regina Hall`,
+        cast: `Morris Chestnut, Melissa De Sousa, Regina Hall`,
         descImg: './images/movies/the-best-man2.jpg'
     },
     {
@@ -172,7 +172,17 @@ export const movies = [
          estranged sisters, played by Sutherland and Sullivan, whose reunion is cut short by the rise of flesh-possessing demons,
           thrusting them into a primal battle for survival as they face the most nightmarish version of family imaginable. `,
         date: new Date(2023, 4, 21),
-        location: 'Crawley'
+        location: 'Crawley',
+        trailerLink: 'https://www.youtube.com/embed/smTK_AeAPHs',
+        trailerTitle: 'EVIL DEAD RISE - Official Trailer - (Redband)',
+        detailedDescription: `Moving the action out of the woods and into the city, EVIL DEAD RISE tells the twisted tale of two estranged sisters,
+         played by Sutherland and Sullivan, whose reunion is cut short by the rise of flesh-possessing demons, thrusting them into a primal battle for
+          survival as they face the most nightmarish version of family imaginable.`,
+        releaseDate: new Date(2023, 4, 21),
+        runningTime: 94,
+        director: 'Lee Cronin',
+        cast: `Lily Sullivan, Nell Fisher, Alyssa Sutherland, Jayden Daniels, Gabrielle Echols, Billy Reynolds-McCarthy, Tai Wano, Morgan Davies`,
+        descImg: './images/movies/evil-dead-rise2.jpg'
     },
     {
         imgPath: './images/movies/fury-of-the-gods.jpg',
@@ -181,7 +191,16 @@ export const movies = [
         description: `From New Line Cinema comes “Shazam! Fury of the Gods,” which continues the story of teenage Billy Batson who,
          upon reciting the magic word “SHAZAM!,” is transformed into his adult Super Hero alter ego, Shazam. `,
         date: new Date(2023, 4, 22),
-        location: 'Crawley'
+        location: 'Crawley',
+        trailerLink: 'https://www.youtube.com/embed/Zi88i4CpHe4',
+        trailerTitle: 'SHAZAM! FURY OF THE GODS - Official Trailer',
+        detailedDescription: `From New Line Cinema comes “Shazam! Fury of the Gods,” which continues the story of teenage Billy Batson who, upon reciting
+         the magic word “SHAZAM!,” is transformed into his adult Super Hero alter ego, Shazam.`,
+        releaseDate: new Date(2023, 3, 17),
+        runningTime: 130,
+        director: 'David F. Sandberg',
+        cast: `Adam Brody, Zachary Levi, Lucy Liu, Helen Mirren, Rachel Zegler, Jack Dylan Grazer, Asher Angel, Marta Milans`,
+        descImg: './images/movies/fury-of-the-gods2.jpg'
     },
     {
         imgPath: './images/movies/how-to-blow-up-a-pipeline.jpg',
@@ -189,7 +208,16 @@ export const movies = [
         title: 'How To Blow Up A Pipeline',
         description: `A crew of environmental activists plot a daring plan to disrupt an oil pipeline.`,
         date: new Date(2023, 4, 22),
-        location: 'Crawley'
+        location: 'Crawley',
+        trailerLink: 'https://www.youtube.com/embed/bSb585bGYmQ',
+        trailerTitle: 'How To Blow Up A Pipeline - Official Trailer',
+        detailedDescription: `How to Blow Up a Pipeline is a 2022 American environmentalist action-thriller film directed by Daniel Goldhaber, who co-wrote
+         the screenplay with Ariela Barer and Jordan Sjol. It relies on ideas advanced in Andreas Malm's 2021 book of the same name, published by Verso Books.`,
+        releaseDate: new Date(2023, 4, 21),
+        runningTime: 104,
+        director: 'Daniel Goldhaber',
+        cast: `Jake Weary, Sasha Lane, Marcus Scribner, Jayme Lawson, Forrest Goodluck, Kristine Froseth, Ariela Barer, Lukas Gage`,
+        descImg: './images/movies/how-to-blow-up-a-pipeline2.jpg'
     },
     {
         imgPath: './images/movies/john-wick.jpg',
@@ -199,7 +227,17 @@ export const movies = [
          With the price on his head ever increasing, Wick takes his fight against the HighTable global as he seeks out the most powerful
           players in the underworld, from New York to Paris to Osaka to Berlin. `,
         date: new Date(2023, 4, 23),
-        location: 'Crawley'
+        location: 'Crawley',
+        trailerLink: 'https://www.youtube.com/embed/yjRHZEUamCc',
+        trailerTitle: 'John Wick: Chapter 4 (2023) Final Trailer – Keanu Reeves, Donnie Yen, Bill Skarsgård',
+        detailedDescription: `John Wick (Keanu Reeves) takes on his most lethal adversaries yet in the upcoming fourth instalment of the series.
+         With the price on his head ever increasing, Wick takes his fight against the HighTable global as he seeks out the most powerful players in
+         the underworld, from New York to Paris to Osaka to Berlin.`,
+        releaseDate: new Date(2023, 4, 24),
+        runningTime: 169,
+        director: 'Chad Stahelski',
+        cast: `Laurence Fishburne, Ian McShane, Keanu Reeves, Hiroyuki Sanada, Donnie Yen, Scott Adkins, Lance Reddick, Bill Skarsgård, Shamier Anderson, Rina Sawayama`,
+        descImg: './images/movies/john-wick2.jpg'
     },
     {
         imgPath: './images/movies/big-george-foreman.jpg',
@@ -208,7 +246,17 @@ export const movies = [
         description: `The film will follow the remarkable life and times of George Foreman, from Olympic Gold medalist to World Heavyweight
          champion, the Rumble in the Jungle fight with Muhammad Ali in Zaire, to finding his faith, retiring, and becoming a preacher. `,
         date: new Date(2023, 4, 21),
-        location: 'Brighton'
+        location: 'Brighton',
+        trailerLink: 'https://www.youtube.com/embed/urKDu40iaXk',
+        trailerTitle: 'BIG GEORGE FOREMAN – Official Trailer (HD)',
+        detailedDescription: `The film will follow the remarkable life and times of George Foreman, from Olympic Gold medalist to World Heavyweight champion,
+         the Rumble in the Jungle fight with Muhammad Ali in Zaire, to finding his faith, retiring, and becoming a preacher. When financial hardship hits his 
+         family and church, he steps back in the ring and regains the championship at age 45, the oldest heavyweight champion in boxing history. `,
+        releaseDate: new Date(2023, 4, 28),
+        runningTime: 129,
+        director: 'George Tillman Jr.',
+        cast: `John Magaro, Sonja Sohn, Forest Whitaker, Khris Davis, Sullivan Jones, Jasmine Mathews, Shein Mompremier `,
+        descImg: './images/movies/big-george-foreman2.jpg'
     },
     {
         imgPath: './images/movies/born-to-fly.jpg',
@@ -217,7 +265,20 @@ export const movies = [
         description: `The story of a special operations team headed by elite pilots , being ordered to test new fighter jets.
          Test flight after test flight, they continue to challenge the sky and the limits of themselves. `,
         date: new Date(2023, 4, 23),
-        location: 'Brighton'
+        location: 'Brighton',
+        trailerLink: 'https://www.youtube.com/embed/3pt3cpD8Pao',
+        trailerTitle: 'BORN TO FLY (2023) Official International Trailer',
+        detailedDescription: `Lei Yu and a group of elite aviators undergo rigorous training to be recognised as official test pilots. Led by the
+         experienced Commander Zhang, they are tasked with testing the latest fighter jets. As they soar to new heights, the unexpected happens when
+          the engine fails and catches fire, causing the aircraft to spiral out of control. Despite facing near-death situations repeatedly, they
+           persevere and gather crucial data under extreme circumstances. However, with the deadline for delivery of the fighter jet quickly approaching,
+            their challenges become increasingly difficult. Will they be able to triumph over adversity and successfully complete their mission? 
+            With breathtaking aerial sequences and high-stakes action, "Born to Fly" is an adrenaline-fueled ride that showcases the unwavering determination and bravery of test pilots.`,
+        releaseDate: new Date(2023, 4, 5),
+        runningTime: 128,
+        director: 'Xiaoshi Liu, Liu Xiaoshi',
+        cast: `Yibo Wang, Jun Hu, Dongyu Zhou, Zhou Dongyu, Wang Yibo, Hu Jun, Xu Kaicheng, Bu Yu`,
+        descImg: './images/movies/born-to-fly2.jpg'
     },
     {
         imgPath: './images/movies/chupa.jpeg',
@@ -226,7 +287,16 @@ export const movies = [
         description: `While visiting family in Mexico, a lonely boy befriends a mythical creature hiding
          on his grandfather's ranch and embarks on the adventure of a lifetime. `,
         date: new Date(2023, 4, 20),
-        location: 'Tunbridge Wells'
+        location: 'Tunbridge Wells',
+        trailerLink: 'https://www.youtube.com/embed/ViKnrHjzgn4',
+        trailerTitle: 'CHUPA | Official Trailer | Netflix',
+        detailedDescription: `While visiting family in Mexico, teenage Alex gains an unlikely companion when he
+         discovers a young chupacabra hiding in his grandpa's shed. To save the mythical creature, Alex and his cousins must embark on the adventure of a lifetime.`,
+        releaseDate: new Date(2023, 3, 30),
+        runningTime: 95,
+        director: 'Jonás Cuarón',
+        cast: `Demián Bichir, Christian Slater, Evan Whitten`,
+        descImg: './images/movies/chupa2.jpg'
     }
 ]
 
@@ -249,5 +319,52 @@ export const availability = [
         title: 'The Best Man',
         availableOn: [[new Date(2023, 4, 20, 10), new Date(2023, 4, 20, 11, 30), new Date(2023, 4, 20, 15)],
         [new Date(2023, 4, 22, 11), new Date(2023, 4, 23, 14)]]
+    },
+    {
+    title: 'Evil Dead Rise',
+    availableOn: [[new Date(2023, 4, 21, 10), new Date(2023, 5, 16, 13), new Date(2023, 5, 16, 20)]]
+    },
+    {
+    title: 'Shazam! Fury Of The Gods',
+    availableOn: [[new Date(2023, 4, 22, 9), new Date(2023, 4, 22, 12), new Date(2023, 4, 22, 18)]]
+    },
+    {
+    title: 'How To Blow Up A Pipeline',
+    availableOn: [[new Date(2023, 2, 22, 11), new Date(2023, 4, 2, 14), new Date(2023, 6, 14, 19)]]
+    },
+    {
+    title: 'John Wick Chapter 4',
+    availableOn: [[new Date(2023, 4, 23, 10), new Date(2023, 4, 23, 13), new Date(2023, 4, 23, 17)]]
+    },
+    {
+    title: 'Big George Foreman',
+    availableOn: [[new Date(2023, 4, 21, 9), new Date(2023, 8, 1, 12), new Date(2023, 8, 1, 19)]]
+    },
+    {
+    title: 'Born To Fly',
+    availableOn: [[new Date(2023, 4, 23, 11), new Date(2023, 4, 23, 14), new Date(2023, 4, 23, 18)]]
+    },
+    {
+        title: 'Chupa',
+        availableOn: [[new Date(2023, 4, 20, 11), new Date(2023, 4, 20, 14), new Date(2023, 4, 20, 18)]]
     }
 ];
+
+export let reviews = [
+    {
+        title: 'Puss in Boots: The Last Wish',
+        comments: [
+            {
+                username: 'EgorPov',
+                date: new Date(2023, 4, 20, 14, 17),
+                message: `There’s an entire pick ’n’ mix stand of eye candy here – more than enough to satisfy younger viewers. But alas, it’s all empty calories.`
+            },
+            {
+                username: 'HarryBodie',
+                date: new Date(2023, 4, 20, 16, 1),
+                message: `The Last Wish is a spellbinding, funny, and gorgeous piece of animated storytelling that restores this franchise to past glory.
+                 The real cat in the hat is back, and his boots are very much made for walking! `
+            }
+        ]
+    }
+]

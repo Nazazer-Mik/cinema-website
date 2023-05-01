@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './Upcoming.css'
 
-class Upcoming extends Component {
-    render() {
-        return (
-            <>
-
-            </>
-        );
-    }
+function Upcoming () {
+    return (
+        <div className='upcoming'>
+            <div className='vote-container'>
+                <h1> Breaking the time frames. . .</h1>
+            </div>
+        </div>
+    );
 }
 
 export default Upcoming;

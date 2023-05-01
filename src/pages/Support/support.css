@@ -142,6 +142,11 @@
     vertical-align: middle;
 }
 
+.send-button
+{
+    border: #b0bbbf 5px solid !important;
+}
+
 .bottom-chat-section input
 {
     width: 80%;
@@ -151,4 +156,5 @@
     padding-left: 15px;
     padding-right: 15px;
     font-size: 1em;
+    border: #FFC300 5px solid;
 }

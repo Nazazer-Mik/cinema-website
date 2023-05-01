@@ -2,8 +2,7 @@ import React from 'react';
 import './support.css'
 import { faqData } from './faq';
 import FAQStatement from '../../components/FAQStatement/FAQStatement.js'
-import TitleWithLine from '../../components/TitleWithLine';
-import SignButton from '../../components/SignButton/SignButton';
+import TitleWithLine from '../../components/TitleWithLine/TitleWithLine';
 
 function Support () {
     
@@ -30,7 +29,7 @@ function Support () {
             <TitleWithLine message='Urgent help and specific enquiries'/>
             <h3 className='contact-us'>
                 If you want to get in contact with us please email us
-                at <a href='mailto:customer.services@whynotcinema.co.uk'>customer.services@whynotcinema.co.uk</a> or give us a call on <a href='tel:0330 033 3444'>0330 033 3444</a>.
+                at <a href='mailto:customer.services@whynotcinema.co.uk'>customer.services@whynotcinema.co.uk</a> or give us a call on <a href='tel:07771 598 227'>07771 598 227</a>.
                 Our lines are open 7 days a week from 9AM to 10PM.
             </h3>
         </div>

@@ -53,7 +53,7 @@ function History () {
 
 let CloseModWindow = () => {
     document.getElementById('history-canvas')?.classList.remove('active');
-    document.body.style.overflow = "scroll";
+    document.body.style.overflowY = "scroll";
 }
 
 export default History;

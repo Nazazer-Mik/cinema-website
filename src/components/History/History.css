@@ -120,6 +120,6 @@
 
 .history-window table tr:hover
 {
-    text-decoration: underline #02a8f3;
+    text-decoration: underline #02a8f3 3px;
     cursor: pointer;
 }

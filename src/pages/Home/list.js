@@ -297,6 +297,56 @@ export const movies = [
         director: 'Jonás Cuarón',
         cast: `Demián Bichir, Christian Slater, Evan Whitten`,
         descImg: './images/movies/chupa2.jpg'
+    },
+    {
+        imgPath: './images/movies/intouchables.jpeg',
+        technologies: [],
+        title: 'The Intouchables',
+        description: `After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.`,
+        date: new Date(2011, 9, 21),
+        location: 'soon',
+        trailerLink: 'https://www.youtube.com/embed/34WIbmXkewU',
+        trailerTitle: 'The Intouchables Official Trailer #1 (2012) HD Movie',
+        detailedDescription: `Philippe (Francois Cluzet) is a millionaire who was paralyzed from the neck down in a para-gliding accident. Driss (Omar Sy)
+         is a man out on parole for robbery, who applies for the job of Philippe's caregiver only so he can be rejected and get a signature on his application for unemployment benefits.`,
+        releaseDate: new Date(2011, 9, 21),
+        runningTime: 112,
+        director: 'Olivier Nakache, Éric Toledano',
+        cast: `François Cluzet, Omar Sy, Anne Le Ny`,
+        descImg: './images/movies/intouchables2.jpg'
+    },
+    {
+        imgPath: './images/movies/wall-e.jpg',
+        technologies: [],
+        title: 'WALL-E',
+        description: `In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.`,
+        date: new Date(2011, 9, 21),
+        location: 'soon',
+        trailerLink: 'https://www.youtube.com/embed/3Mi62VKDhm0',
+        trailerTitle: 'WALL·E - Official Trailer 2008 [HD]',
+        detailedDescription: `WALL•E (Waste Allocation Load Lifter Earth-Class) is the last robot left on Earth, programmed to clean up the planet, one trash cube
+         at a time. However, after 700 years, he's developed one little glitch—a personality. He's extremely curious, highly inquisitive, and a little lonely.`,
+        releaseDate: new Date(2008, 6, 18),
+        runningTime: 98,
+        director: 'Andrew Stanton',
+        cast: `Ben Burtt, Elissa Knight, Jeff Garlin`,
+        descImg: './images/movies/wall-e2.jpg'
+    },
+    {
+        imgPath: './images/movies/gentlemen.jpg',
+        technologies: [],
+        title: 'The Gentlemen',
+        description: `An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him.`,
+        date: new Date(2011, 9, 21),
+        location: 'soon',
+        trailerLink: 'https://www.youtube.com/embed/vaN8BtA8OJk',
+        trailerTitle: 'THE GENTLEMEN Trailer (2020)',
+        detailedDescription: `An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him.`,
+        releaseDate: new Date(2019, 12, 3),
+        runningTime: 113,
+        director: 'Guy Ritchie',
+        cast: `Matthew McConaughey, Charlie Hunnam, Michelle Dockery`,
+        descImg: './images/movies/gentlemen2.jpg'
     }
 ]
 

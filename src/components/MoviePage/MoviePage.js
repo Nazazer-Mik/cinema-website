@@ -88,13 +88,20 @@ function MoviePage (props) {
             <iframe width="1920" height="1080" src={movie.trailerLink} 
             title={movie.trailerTitle} 
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <div className='ticket-box'>
-                <div className='ticket-button'>Buy Tickets</div>
-                <h3>Available dates and times:</h3>
-                <table>
-                    {availability.find(findObj).availableOn.map(arr => pasteTimes(arr))}
-                </table>
-            </div>
+            {
+                () => {
+                    if (movie.location !== 'soon')
+                    {
+                        return (<div className='ticket-box'>
+                            <div className='ticket-button'>Buy Tickets</div>
+                            <h3>Available dates and times:</h3>
+                            <table>
+                                {availability.find(findObj).availableOn.map(arr => pasteTimes(arr))}
+                            </table>
+                        </div>);
+                    }
+                }
+            }
             </div>
         </div>
         <div className='description-block-movie'>

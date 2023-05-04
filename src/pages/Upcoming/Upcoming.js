@@ -19,7 +19,7 @@ function Upcoming () {
             <div className='vote-container' ref={contRef}>
                 <h1> Breaking the time frames. . .</h1>
                 {threeMovies}
-                <VotingLine first={5} second={4} third={7}/>
+                <VotingLine votes={{first: 5, second: 4, third: 7}}/>
             </div>
         </div>
     );

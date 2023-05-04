@@ -5,6 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2%;
+    box-sizing: border-box;
 }
 
 .three-blocks-container
@@ -12,4 +14,28 @@
     background-color:aquamarine;
     width: 100%;
     height: 10vh;
+}
+
+.vote-section
+{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.first
+{
+    background: linear-gradient(to right, #B0E0E6, #7FFFD4);
+}
+
+.second
+{
+    background: linear-gradient(to right, #7FFFD4, #40E0D0);
+}
+
+.third
+{
+    background: linear-gradient(to right, #40E0D0, #00CED1);
 }

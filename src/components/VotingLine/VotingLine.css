@@ -1,0 +1,15 @@
+.three-flex-container
+{
+    margin-top: 4vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.three-blocks-container
+{
+    background-color:aquamarine;
+    width: 100%;
+    height: 10vh;
+}

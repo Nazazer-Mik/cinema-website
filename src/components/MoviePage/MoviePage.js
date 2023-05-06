@@ -55,9 +55,17 @@ function MoviePage (props) {
             date: new Date(Date.now()),
             message: document.getElementById('comment-body')?.value
         }
+        
         let revs = reviewsState.filter(r => r.title === movie.title);
         
-        revs[0].comments.push(newComment);
+        if (revs.length !== 0)
+            revs[0].comments.push(newComment);
+        else 
+            revs.push({
+                title: movie.title,
+                comments: [newComment]
+            });
+        
         setReviewsState(revs);
     }
 
@@ -76,6 +84,19 @@ function MoviePage (props) {
             return <h3 style={{display: "block"}}>Please, log in to leave reviews.</h3>
     }
 
+    let orderButton = () => {
+        if (movie.location !== 'soon')
+        {
+            return (<div className='ticket-box'>
+                <div className='ticket-button'>Buy Tickets</div>
+                <h3>Available dates and times:</h3>
+                <table>
+                    {availability.find(findObj).availableOn.map(arr => pasteTimes(arr))}
+                </table>
+            </div>);
+        }
+    }
+
     let findObj = (e) => e.title === movie.title;
 
     window.scrollTo(0, 0);
@@ -89,19 +110,7 @@ function MoviePage (props) {
             title={movie.trailerTitle} 
             frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             {
-                () => { //>>>>>>>>>???????????????????????????
-                    console.log(movie.location);
-                    if (movie.location !== 'soon')
-                    {
-                        return (<div className='ticket-box'>
-                            <div className='ticket-button'>Buy Tickets</div>
-                            <h3>Available dates and times:</h3>
-                            <table>
-                                {availability.find(findObj).availableOn.map(arr => pasteTimes(arr))}
-                            </table>
-                        </div>);
-                    }
-                }
+                orderButton()
             }
             </div>
         </div>

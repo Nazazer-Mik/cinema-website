@@ -33,6 +33,11 @@
     align-self: start;
 }
 
+.barn-container
+{
+    max-width: 80%;
+}
+
 .vote-description h2, .barn-container h2
 {
     color:#FFC300;
@@ -53,4 +58,51 @@
 .underline
 {
     text-decoration: underline 3px #ffb111;
+}
+
+.suggestion-block
+{
+    display: inline-block;
+    margin: 3vh;
+    padding: 3vh;
+    border: 3px solid #b0bbbf;
+    border-radius: 30px;
+    background-color: #242423;
+}
+
+.suggestion-block img
+{
+    max-width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.suggestion-block h3
+{
+    font-family: 'Montserrat', sans-serif;
+    color: #f5f5f5;
+    display: inline-block;
+    vertical-align: middle;
+    word-spacing: 0.4em;
+}
+
+.suggestion-block p
+{
+    text-indent: 2em;
+    color: #b0bbbf;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5em;
+    padding: 3%;
+    padding-left: 0;
+}
+
+.cm
+{
+    font-family: 'Montserrat', sans-serif;
+    color: #f5f5f5;
+    display: inline-block;
+    vertical-align: middle;
+    word-spacing: 0.4em;
+    margin-top: 10vh;
 }

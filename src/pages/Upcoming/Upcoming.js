@@ -10,7 +10,7 @@ function Upcoming () {
     let contRef = useRef();
     let threemovies = movies.filter(m => m.location === 'soon').map((m) => <MovieBlock data={m}/>);
     let user  = sessionStorage.getItem("authorized");
-    let [suggs, setSuggs] = useState(suggestions);
+    let [suggs, setSuggs] = useState([...suggestions]);
 
     let threeMovies = (
                 <div className='three-top-movies'>

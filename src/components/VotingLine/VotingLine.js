@@ -20,7 +20,7 @@ function VotingLine (props) {
             </div>
             <div className='vote-sign'>
                 <img src='./images/back.png'/> 
-                    <h2> {(user == null) ? 'Please, sign in to vote' : 'Vote'} </h2>
+                    <h2> {(user == null) ? 'Please, sign in to vote' : 'Click to vote'} </h2>
                 <img src='./images/back.png'/> 
             </div>
         </>

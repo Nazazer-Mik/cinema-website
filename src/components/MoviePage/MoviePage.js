@@ -87,9 +87,10 @@ function MoviePage (props) {
             <div className='trailer-flex-container'>
             <iframe width="1920" height="1080" src={movie.trailerLink} 
             title={movie.trailerTitle} 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             {
-                () => {
+                () => { //>>>>>>>>>???????????????????????????
+                    console.log(movie.location);
                     if (movie.location !== 'soon')
                     {
                         return (<div className='ticket-box'>

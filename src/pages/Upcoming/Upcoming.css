@@ -24,3 +24,33 @@
     align-items: center;
     margin-top: 3vh;
 }
+
+.vote-description, .barn-container
+{
+    padding: 5vh;
+    padding-left: 10%;
+    max-width: 45%;
+    align-self: start;
+}
+
+.vote-description h2, .barn-container h2
+{
+    color:#FFC300;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 5vh;
+}
+
+.vote-description p
+{
+    text-indent: 3em;
+    color:#b0bbbf;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 2vw;
+    font-size: large;
+}
+
+.underline
+{
+    text-decoration: underline 3px #ffb111;
+}

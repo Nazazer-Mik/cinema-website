@@ -35,6 +35,7 @@
     cursor: pointer;
     user-select: none;
     transition: all .3s ease;
+    min-width: fit-content;
 }
 
 .first-bl

@@ -1,0 +1,122 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+.left-panel
+{
+    position: fixed;
+    box-sizing: border-box;
+    height: 84vh;
+    width: 16vw;
+    padding-top: 14vh;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+    transition: all .3s ease;
+}
+
+.left-panel ul
+{
+    color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    list-style-type: none;
+    border-left: 3px solid #FFC300;
+    text-shadow: 0 0 15px #242424;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    z-index: 3;
+}
+
+.left-panel li
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+    z-index: 3;
+}
+
+.left-panel li:hover
+{
+    transform: translateX(10px);
+}
+
+.shop-container
+{
+    margin: 0;
+    padding: 0;
+    padding-left: 16vw;
+    padding-top: 5vh;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #2c2d3c;
+}
+
+.food-container
+{
+    width: 100%;
+    padding: 4%;
+    box-sizing: border-box;
+}
+
+.food-container h2
+{
+    color: #FFC300;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    padding-left: 20px;
+    padding-right: 40px;
+    display: block;
+    white-space: nowrap;
+}
+
+.title-container
+{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.food-block
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+    text-align: center;
+    margin: 5vh;
+    background-color: #242423;
+    padding: 2vh;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .3s ease;
+    border: 3px solid #FFC300;
+}
+
+.food-block:hover
+{
+    transform: scale(103%);
+}
+
+.food-img
+{
+    width: 15vw;
+    height: 15vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.food-block h3
+{
+    color: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+}

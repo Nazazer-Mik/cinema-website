@@ -71,7 +71,7 @@ function Home (props) {
             <History />
             <div className="line-itself" style={{marginTop: '15vh', marginBottom: '8vh', backgroundColor: '#b0bbbf'}}></div>
             <div className='chart-section'>
-                <h1 style={{fontSize: '2em'}}>Interesting fact: did you know that 32% of our visitors don't attend the screenings with booked tickets? </h1>
+                <h1 style={{fontSize: '2em'}}><span className='underline' style={{marginRight: '15px'}}> Interesting fact:</span> Did you know that 28% of our visitors don't attend the screenings with booked tickets? </h1>
                 <div id='chart-div'></div>
             </div>
         </div>

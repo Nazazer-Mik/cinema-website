@@ -3,7 +3,7 @@ import './Footer.css'
 
 function Footer () {
     return (
-        <div className='footer-box'>
+        <div className='footer-box' id = 'bottom'>
             <div className='flex-container'>
                 <div className='pages-list'>
                     <h3>Sitemap</h3>

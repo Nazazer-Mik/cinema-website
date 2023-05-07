@@ -17,7 +17,7 @@ function Cafe () {
                 <div className='food-block'>
                     <div className='food-img' style={{backgroundImage: `url(${obj.imgPath})`}}/>
                     <hr style={{width: '100%', marginTop: '30px'}}/>
-                    <h3>{obj.title}</h3>
+                    <h3>{obj.title} <font className='price'> {obj.price}£ </font></h3>
                 </div>
             </div>
         );
